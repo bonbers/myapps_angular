@@ -30,6 +30,14 @@ export class AppComponent {
     public left = 0;
     public posX = 0;
     stateExpression ='off';
+    courses=['pain','lait','beurre','farine'];
+public fruits : string[] = [];
+public fruit: '';
+
+public deleted(i) {
+    // this.fruits.splice(i,1);
+    console.log(this.fruits.splice(i,1));
+}
 
     public affichageDate() {
         this.display = !this.display;

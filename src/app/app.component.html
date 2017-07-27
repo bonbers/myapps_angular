@@ -33,3 +33,20 @@
 <app-carousel></app-carousel>
 
 <p>Exercice 7</p>
+
+<input type="text" value="Vos choix"/>
+
+<div class="container zone1">
+  <p class="soul">Composant Parent</p>
+  <h1>Ajouter un fruit</h1>
+  <div class="inp">
+  <input type="text" [(ngModel)]="fruit"/>
+  <button (click)="fruits.push(fruit)" class="btn btn-success">Ajouter un fruit</button>
+  </div>
+</div>
+
+<div class="container zone1">
+  <p class="soul">Composant enfant</p>
+<app-fruit *ngFor="let fruitItem of fruits; let i=index" [fruit]="fruitItem" (click)="deleted(i)"></app-fruit>
+
+</div>
