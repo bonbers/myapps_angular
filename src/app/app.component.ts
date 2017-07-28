@@ -34,9 +34,27 @@ export class AppComponent {
 public fruits : string[] = [];
 public fruit: '';
 
+    public counter : number = 0;
+
+    increment(){
+        this.counter += 1;
+    }
+
+    decrement(){
+        this.counter -= 1;
+    }
 public deleted(i) {
     // this.fruits.splice(i,1);
-    console.log(this.fruits.splice(i,1));
+    this.fruits.splice(i,1);
+}
+
+public addfruit(){
+    if(this.fruits.indexOf(this.fruit) === -1) {
+        this.fruits.push(this.fruit);
+    }
+    else {
+        alert ('Fruit existant');
+    }
 }
 
     public affichageDate() {

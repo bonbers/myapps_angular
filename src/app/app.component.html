@@ -41,7 +41,7 @@
   <h1>Ajouter un fruit</h1>
   <div class="inp">
   <input type="text" [(ngModel)]="fruit"/>
-  <button (click)="fruits.push(fruit)" class="btn btn-success">Ajouter un fruit</button>
+  <button (click)="addfruit()" class="btn btn-success">Ajouter un fruit</button>
   </div>
 </div>
 
@@ -50,3 +50,9 @@
 <app-fruit *ngFor="let fruitItem of fruits; let i=index" [fruit]="fruitItem" (click)="deleted(i)"></app-fruit>
 
 </div>
+
+<p>Exercice 2 Phase 2</p>
+
+<button class="btn btn-info" (click)="increment()">Increment</button>
+<button class="btn btn-info" (click)="decrement()">Decrement</button>
+<p>{{counter}}</p>
